@@ -16,7 +16,7 @@ const List = () => {
   return (
     <Section>
       <Ul>
-        {todos && todos.map((e) => <Item key={e} item={e} />)}
+        {todos && todos.map((e, i) => <Item key={e} index={i} item={e} />)}
       </Ul>
     </Section>
   );

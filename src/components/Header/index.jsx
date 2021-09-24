@@ -1,23 +1,11 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import {
   HeaderDiv, Div, H1, Img, TextField,
 } from './styles';
-import ChangeTodo from '../../redux/action';
+import useAddItem from '../../hook/useAddItem';
 
 const Header = () => {
-  const [item, setItem] = useState('');
-  const dispatch = useDispatch();
-
-  const handleKeyDown = (event) => {
-    const { target: { value } } = event;
-    setItem(value);
-
-    if (event.charCode === 13) {
-      dispatch(ChangeTodo(item));
-      setItem('');
-    }
-  };
+  const { item, handleKeyDown } = useAddItem();
 
   return (
     <HeaderDiv>
