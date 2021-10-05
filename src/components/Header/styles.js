@@ -10,6 +10,12 @@ export const HeaderDiv = styled.header`
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  @media(min-width: 824px) {
+    background: ${(props) => (props.themeSelect ? "url('./todo-app-main/images/bg-desktop-light.jpg')" : "url('./todo-app-main/images/bg-desktop-dark.jpg')")};;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vh;
+  }
 `;
 
 export const Div = styled.div`
@@ -17,6 +23,10 @@ export const Div = styled.div`
   padding: 0 7.5vw;
   display: flex;
   justify-content: space-between;
+  @media(min-width: 824px) {
+    width: 40vw;
+    justify-content: space-between;
+  }
 `;
 
 export const H1 = styled.h1`
@@ -24,11 +34,18 @@ export const H1 = styled.h1`
   letter-spacing: 10px;
   font-weight: 700;
   font-size: 20px;
+  @media(min-width: 824px) {
+    font-size: 40px;
+  }
 `;
 
 export const Img = styled.img`
   width: 20px;
   height: 20px;
+  @media(min-width: 824px) {
+    height: 40px;
+    width: 40px;
+  }
 `;
 
 export const TextField = styled.input`
@@ -39,5 +56,9 @@ export const TextField = styled.input`
   border-radius: 5px;
   ::placeholder {
     padding-left: 40px;
+  }
+  @media(min-width: 824px) {
+    width: 35vw;
+    height: 80px;
   }
 `;

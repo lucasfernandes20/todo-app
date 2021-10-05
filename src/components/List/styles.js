@@ -10,6 +10,9 @@ export const Section = styled.section`
   margin-bottom: -30px;
   box-shadow: ${(props) => (props.themeSelect ? '1px 5px 10px hsla(236, 9%, 61%, 0.5)' : null)};
   overflow-y: scroll;
+  @media(min-width: 824px) {
+    width: 40vw;
+  }
 `;
 
 export const Ul = styled.ul`
@@ -30,6 +33,9 @@ export const Div = styled.div`
   margin-bottom: -50px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  @media(min-width: 824px) {
+    width: 35vw;
+  }
 `;
 
 export const P = styled.p`
