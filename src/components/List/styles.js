@@ -32,8 +32,14 @@ export const Section = styled.section`
 export const Ul = styled.ul`
   height: 50px;
   width: 100%;
+  ol {
+    height: 50px;
+  }
   @media(min-width: 824px) {
     height: 10vh;
+    ol {
+    height: 10vh;
+  }
   }
 `;
 
@@ -73,12 +79,13 @@ export const P = styled.p`
 `;
 
 export const Filter = styled.section`
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
+  display: none;
   @media(min-width: 824px) {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
     gap: 2.5vh;
   }
 `;
