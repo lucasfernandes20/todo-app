@@ -11,6 +11,9 @@ export const Section = styled.section`
   align-items: center;
   gap: 20px;
   justify-content: center;
+  @media(min-width: 824px) {
+    display: none;
+  }
 `;
 
 export const P = styled.p`

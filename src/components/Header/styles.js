@@ -35,16 +35,22 @@ export const H1 = styled.h1`
   font-weight: 700;
   font-size: 20px;
   @media(min-width: 824px) {
-    font-size: 40px;
+    font-size: 3vw;
+    letter-spacing: 20px;
   }
 `;
 
 export const Img = styled.img`
   width: 20px;
   height: 20px;
+  cursor: pointer;
   @media(min-width: 824px) {
-    height: 40px;
-    width: 40px;
+    height: 3vw;
+    transition: ease-in-out 0.5s;
+    :hover {
+    transform: rotate(90deg);
+    }
+    width: 3vw;
   }
 `;
 
@@ -55,10 +61,15 @@ export const TextField = styled.input`
   background-color: ${(props) => (props.themeSelect ? 'white' : 'hsl(235, 24%, 19%)')};
   border-radius: 5px;
   ::placeholder {
+    color: hsl(236, 9%, 61%);
     padding-left: 40px;
   }
   @media(min-width: 824px) {
     width: 35vw;
-    height: 80px;
+    height: 10vh;
+    font-size: 2.5vh;
+    ::placeholder {
+    font-size: 2.5vh;
+  }
   }
 `;

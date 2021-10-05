@@ -7,6 +7,10 @@ export const Div = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid ${(props) => (props.themeSelect ? 'hsl(236, 33%, 92%)' : 'hsl(235, 19%, 35%)')};
+  justify-content: space-between;
+  :hover Img{
+      opacity: 1;
+    }
 `;
 
 export const Li = styled.li`
@@ -15,12 +19,17 @@ export const Li = styled.li`
   text-decoration: ${(props) => (props.check ? 'line-through' : 'none')};
   font-weight: 400;
   width: 100%;
+  @media(min-width: 824px) {
+    width: 80%;
+    font-size: 2.3vh;
+  }
 `;
 
 export const Ball = styled.div`
   width: 10px;
   height: 10px;
   padding: 5px;
+  cursor: pointer;
   border: ${(props) => {
     if (props.check) {
       return '1px solid white';
@@ -36,8 +45,20 @@ export const Ball = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media(min-width: 824px) {
+    width: 3vh;
+    height: 3vh;
+  }
 `;
 
 export const Img = styled.img`
   width: 15px;
+  height: 15px;
+  cursor: pointer;
+  @media(min-width: 824px) {
+    width: 3vh;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+    height: 3vh;
+  }
 `;
