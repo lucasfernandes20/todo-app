@@ -7,6 +7,7 @@ import TodoList from '../reducer';
 const persistConfig = {
   key: 'root',
   storage,
+  blacklist: ['filter'],
 };
 
 const persistedReducer = persistReducer(persistConfig, TodoList);

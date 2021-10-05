@@ -13,3 +13,11 @@ export const RemoveTodo = (list) => ({
 export const CheckTodo = (list) => ({
   type: 'CHECKED', list,
 });
+
+export const FilterTodo = (list, filter) => ({
+  type: 'SET-FILTERED', list, filter,
+});
+
+export const ChangeTheme = (theme) => ({
+  type: 'SET-THEME', theme,
+});

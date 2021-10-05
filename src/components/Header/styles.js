@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeaderDiv = styled.header`
   width: 100vw;
-  background: url('./todo-app-main/images/bg-mobile-light.jpg');
+  background: ${(props) => (props.themeSelect ? "url('./todo-app-main/images/bg-mobile-light.jpg')" : "url('./todo-app-main/images/bg-mobile-dark.jpg')")};
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
@@ -35,6 +35,7 @@ export const TextField = styled.input`
   width: 80vw;
   padding: 0 2.5vw;
   height: 50px;
+  background-color: ${(props) => (props.themeSelect ? 'white' : 'hsl(235, 24%, 19%)')};
   border-radius: 5px;
   ::placeholder {
     padding-left: 40px;
